@@ -1,10 +1,11 @@
 body {
     font-family: Consolas;
+    background-color: #222222;
     width: 100%;
-    background-color: #F5F5F5;
 }
 
 .container {
+    background-color: #F5F5F5;
     display: flex;
     flex-direction:column;
     justify-content: center;
@@ -22,7 +23,7 @@ input[type=number] {
     border: .25px solid gray;
     text-align: center;
     font-size: 2.5rem;
-    width: 80%;
+    width: 60%;
     padding: .5em 0;
     font-family: Consolas;
 }
@@ -36,6 +37,15 @@ input[type=number] {
     margin: 0 .15em;
     margin-bottom: .5em;
     outline: 0;
+}
+
+#increase, #decrease, .btn, .btn:hover, .container, #num {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 #increase:focus, #decrease:focus {
@@ -69,12 +79,14 @@ input[type=number] {
     font-size: 1.25em;
     width: 6em;
     text-transform: uppercase;
-    text-align: left;
+    text-align: center;
     font-weight: bold;
     height: 1.5em;
     transition: all .1s ease-in-out;
     margin: .3em 0;
 }
+
+
 
 #clear {
     margin-top: 1em;
@@ -88,6 +100,15 @@ input[type=number] {
 }
 
 @media only screen and (min-width: 600px) {
+    body {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+    }
+    .container {
+        width: 598px;
+        height: 100vh;
+    }
     input[type=number] {
         background-color: lightgray;
         border: .25px solid gray;
